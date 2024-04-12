@@ -31,6 +31,7 @@
 ### 如何更有效率地找出 w,b
 
 #### 梯度下降(gradient descent)
+- 範例: gradient_descent.ipynb
 - 根據斜率改變參數
 
     1. 先計算出 cost function: (真實數據-預測值)^2
@@ -56,3 +57,39 @@
 - 學習率(Learning Rate): 步伐大小
 
     - 學習率不得過大或過小
+
+### 小結: 機器學習過程
+1. 準備好資料
+2. 設定一個模型
+3. 設定一個cost function
+4. 設定 optimizer(優化)
+
+## 方法二: 多元線性回歸
+- 優點: 資料可以多個特徵
+- y=w1*x1+w2*x2+w3*x3....+b -> w1,w2,w3: 特徵
+- 求 w1,w2,w3 以及 b 
+
+### 資料預處理 (Label Encoding)
+- 並非所有特徵都是數字，所以需要針對資料做預處理動作
+
+### 如何加速 Gradient Descent
+
+#### 利用特徵縮放(Feature Scaling)
+- 透過每個特徵分布範圍:
+
+    - 越大的特徵分布,w就需要較小的變動
+
+#### (一): 標準化(Standardization)
+```
+(x - mean(x)) / x標準差
+```
+
+## 方法三:邏輯回歸(Logistic Regression)
+- 當資料分佈無法利用一條斜直線
+
+### 分類問題(Classification)
+#### Sigmoid Function
+```
+z = w1*x1 + w2*x2 + w3*x3 .... +b
+Sigmoid Function = 1 / 1 + e^-z
+```
